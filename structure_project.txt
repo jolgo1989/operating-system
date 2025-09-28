@@ -1,0 +1,52 @@
+proyecto_sistemas_operativos/
+│
+├── src/                          # Código fuente principal
+│   ├── main.py                   # Punto de entrada (ventana principal)
+│   ├── config/                   # Configuración centralizada
+│   │   └── settings.py           # Variables globales (ruta inicial, colores, etc.)
+│   ├── gui/                      # Interfaces gráficas (Tkinter)
+│   │   ├── __init__.py
+│   │   ├── ventana_principal.py  # Menú principal
+│   │   ├── explorador/           # Módulo Explorador de Archivos
+│   │   │   ├── __init__.py
+│   │   │   ├── listar.py
+│   │   │   ├── crear.py
+│   │   │   ├── eliminar.py
+│   │   │   └── abrir.py
+│   │   ├── procesos/             # Módulo Gestión de Procesos
+│   │   │   ├── __init__.py
+│   │   │   ├── listar.py
+│   │   │   └── finalizar.py
+│   │   ├── shell/                # Módulo Automatización con Shell
+│   │   │   ├── __init__.py
+│   │   │   ├── ejecutar.py
+│   │   │   └── cargar_script.py
+│   │   └── sistema/              # Módulo Información del Sistema
+│   │       ├── __init__.py
+│   │       ├── usuario.py
+│   │       ├── disco.py
+│   │       └── plataforma.py
+│   │
+│   └── utils/                    # Funciones auxiliares reutilizables
+│       ├── __init__.py
+│       ├── paths.py              # Manejo de rutas
+│       ├── dialogs.py            # Ventanas emergentes
+│       └── logger.py             # Registro de eventos
+│
+├── tests/                        # Pruebas automatizadas
+│   ├── __init__.py
+│   ├── test_explorador.py
+│   ├── test_procesos.py
+│   ├── test_shell.py
+│   └── test_sistema.py
+│
+├── docs/                         # Documentación técnica
+│   ├── arquitectura.md           # Esquema de módulos y flujo
+│   ├── instalacion.md            # Guía de instalación y dependencias
+│   ├── uso.md                    # Manual de usuario
+│   └── evaluacion.md             # Rúbrica y criterios de calificación
+│
+├── requirements.txt              # Dependencias del proyecto
+├── pyproject.toml / setup.cfg    # Configuración (si se empaqueta)
+├── README.md                     # Descripción general del proyecto
+└── .gitignore                    # Archivos a ignorar en Git
