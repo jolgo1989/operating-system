@@ -1,4 +1,4 @@
-from src.gui.ventana_principal import lanzar_menu_principal
+from src.gui import ventana_principal
 
 if __name__ == "__main__":
-    lanzar_menu_principal()
+   ventana_principal.lanzar_menu_principal()

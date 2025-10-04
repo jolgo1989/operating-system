@@ -1,2 +1,2 @@
-from .styles import config_boton
+from .button_styles import config_boton
 

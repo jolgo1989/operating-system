@@ -1,5 +1,4 @@
 # src/gui/explorador/listar.py
-
 import tkinter as tk
 import os
 from src.config import config_boton 
