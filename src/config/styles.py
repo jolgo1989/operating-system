@@ -1,4 +1,4 @@
-config_boton = {
+button_config = {
     "bg": "#006A67",
     "fg": "white",
     "font": ("Arial", 12),

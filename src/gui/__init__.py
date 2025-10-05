@@ -1,3 +1,3 @@
-from . import ventana_principal
+from .main_window import launch_main_menu
 
-__all__ = ["lanzar_menu_principal"]
+__all__ = ['launch_main_menu']

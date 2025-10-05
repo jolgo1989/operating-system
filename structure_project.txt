@@ -1,52 +1,62 @@
 proyecto_sistemas_operativos/
 │
-├── src/                          # Código fuente principal
-│   ├── main.py                   # Punto de entrada (ventana principal)
-│   ├── config/                   # Configuración centralizada
-│   │   └── settings.py           # Variables globales (ruta inicial, colores, etc.)
-│   ├── gui/                      # Interfaces gráficas (Tkinter)
-│   │   ├── __init__.py
-│   │   ├── ventana_principal.py  # Menú principal
-│   │   ├── explorador/           # Módulo Explorador de Archivos
-│   │   │   ├── __init__.py
-│   │   │   ├── listar.py
-│   │   │   ├── crear.py
-│   │   │   ├── eliminar.py
-│   │   │   └── abrir.py
-│   │   ├── procesos/             # Módulo Gestión de Procesos
-│   │   │   ├── __init__.py
-│   │   │   ├── listar.py
-│   │   │   └── finalizar.py
-│   │   ├── shell/                # Módulo Automatización con Shell
-│   │   │   ├── __init__.py
-│   │   │   ├── ejecutar.py
-│   │   │   └── cargar_script.py
-│   │   └── sistema/              # Módulo Información del Sistema
-│   │       ├── __init__.py
-│   │       ├── usuario.py
-│   │       ├── disco.py
-│   │       └── plataforma.py
-│   │
-│   └── utils/                    # Funciones auxiliares reutilizables
-│       ├── __init__.py
-│       ├── paths.py              # Manejo de rutas
-│       ├── dialogs.py            # Ventanas emergentes
-│       └── logger.py             # Registro de eventos
-│
-├── tests/                        # Pruebas automatizadas
+├── main.py                           # Punto de entrada en raíz
+├── src/
 │   ├── __init__.py
-│   ├── test_explorador.py
-│   ├── test_procesos.py
+│   ├── __main__.py                   # Permite ejecutar con: python -m src
+│   ├── config/
+│   │   ├── __init__.py
+│   │   ├── settings.py
+│   │   └── styles.py                 # Renombrado: todos los estilos, no solo botones
+│   ├── gui/
+│   │   ├── __init__.py
+│   │   ├── main_window.py            # Renombrado: inglés consistente
+│   │   ├── common/                   # Renombrado: inglés consistente
+│   │   │   ├── __init__.py
+│   │   │   └── windows.py
+│   │   ├── file_explorer/            # Renombrado: inglés consistente y más descriptivo
+│   │   │   ├── __init__.py
+│   │   │   ├── explorer.py
+│   │   │   ├── list_files.py         # Más descriptivo
+│   │   │   ├── create.py
+│   │   │   ├── delete.py
+│   │   │   └── open.py
+│   │   ├── process_manager/          # Más descriptivo
+│   │   │   ├── __init__.py
+│   │   │   ├── list_processes.py
+│   │   │   └── terminate.py
+│   │   ├── shell/
+│   │   │   ├── __init__.py
+│   │   │   ├── execute.py
+│   │   │   └── load_script.py
+│   │   └── system_info/              # Más descriptivo
+│   │       ├── __init__.py
+│   │       ├── user.py
+│   │       ├── disk.py
+│   │       └── platform_info.py      # Evita conflicto con módulo 'platform'
+│   │
+│   └── utils/
+│       ├── __init__.py
+│       ├── paths.py
+│       ├── dialogs.py
+│       └── logger.py
+│
+├── tests/
+│   ├── __init__.py
+│   ├── test_file_explorer.py
+│   ├── test_process_manager.py
 │   ├── test_shell.py
-│   └── test_sistema.py
+│   └── test_system_info.py
 │
-├── docs/                         # Documentación técnica
-│   ├── arquitectura.md           # Esquema de módulos y flujo
-│   ├── instalacion.md            # Guía de instalación y dependencias
-│   ├── uso.md                    # Manual de usuario
-│   └── evaluacion.md             # Rúbrica y criterios de calificación
+├── docs/
+│   ├── architecture.md               # Inglés consistente
+│   ├── installation.md
+│   ├── usage.md
+│   └── evaluation.md
 │
-├── requirements.txt              # Dependencias del proyecto
-├── pyproject.toml / setup.cfg    # Configuración (si se empaqueta)
-├── README.md                     # Descripción general del proyecto
-└── .gitignore                    # Archivos a ignorar en Git
+├── requirements.txt
+├── setup.py                          # Añadido para instalación
+├── pyproject.toml                    # Preferido sobre setup.cfg
+├── README.md
+├── .gitignore
+└── LICENSE                           # Añadido: buena práctica incluir licencia
