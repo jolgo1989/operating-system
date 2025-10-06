@@ -5,6 +5,7 @@ from src.gui.common.windows import create_secondary_window
 from src.gui.file_explorer.list_files import list_files
 from src.gui.file_explorer.open import open_folder, go_back
 from src.gui.file_explorer.delete import delete_item
+from src.gui.file_explorer.create import create_item
 
 def create_file_explorer():
     current_folder = FOLDER
@@ -29,7 +30,9 @@ def create_file_explorer():
                          command=lambda: list_files(listbox, current_folder), 
                          **button_config)
     btn_change = tk.Button(frame_buttons, text="Change Folder", **button_config)
-    btn_create = tk.Button(frame_buttons, text="Create Folder", **button_config)
+    btn_create = tk.Button(frame_buttons, text="Create", 
+                          command=lambda: create_item(listbox, current_folder, update_folder), 
+                          **button_config)
     btn_delete = tk.Button(frame_buttons, text="Delete", 
                           command=lambda: delete_item(listbox, current_folder, update_folder), 
                           **button_config)
